@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <h1>Snake</h1>
+          <p class="subtitle">Classic grid movement, food, score, and restart.</p>
+        </div>
+        <div class="scoreboard">
+          <div class="scoreboard__item">
+            <span class="scoreboard__label">Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="scoreboard__item">
+            <span class="scoreboard__label">Best</span>
+            <strong id="best-score">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <span id="status">Press any arrow key or WASD to start.</span>
+        <div class="actions">
+          <button id="pause-button" type="button">Pause</button>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+      </div>
+
+      <div class="board-frame">
+        <div id="board" class="board" aria-label="Snake game board" role="grid"></div>
+      </div>
+
+      <div class="controls">
+        <button class="control-button" type="button" data-direction="up" aria-label="Move up">Up</button>
+        <div class="controls__middle">
+          <button class="control-button" type="button" data-direction="left" aria-label="Move left">Left</button>
+          <button class="control-button" type="button" data-direction="down" aria-label="Move down">Down</button>
+          <button class="control-button" type="button" data-direction="right" aria-label="Move right">Right</button>
+        </div>
+      </div>
+
+      <p class="help-text">Controls: Arrow keys or WASD. Space pauses. Restart returns to a fresh board.</p>
+    </section>
+  </main>
+
+  <script src="src/gameLogic.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
